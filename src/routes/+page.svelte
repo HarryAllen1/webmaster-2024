@@ -4,4 +4,8 @@
 	let count = 0;
 </script>
 
-<Button on:click={() => count++}>Count: {count}</Button>
+<div class="container flex flex-col mt-8">
+	<div class="w-full">
+		<Button on:click={() => count++}>Count: {count}</Button>
+	</div>
+</div>
