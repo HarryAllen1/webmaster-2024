@@ -4,9 +4,11 @@
 	import { Menu } from 'lucide-svelte';
 	import MobileLink from './MobileLink.svelte';
 
-	export let navItems: { title: string; href: string }[];
+	let { navItems } = $props<{
+		navItems: { title: string; href: string }[];
+	}>();
 
-	let open = false;
+	let open = $state(false);
 </script>
 
 <Sheet.Root bind:open>

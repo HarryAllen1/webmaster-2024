@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { ModeWatcher } from 'mode-watcher';
 	import DesktopNav from './DesktopNav.svelte';
 	import MobileNav from './MobileNav.svelte';
-	import ThemeToggle from './ThemeToggle.svelte';
 
 	const navItems: { title: string; href: string }[] = [
 		{
@@ -17,17 +15,13 @@
 >
 	<div class="container flex h-14 items-center">
 		<a href="/" class="mr-6 flex items-center space-x-2">
-			<span class="hidden font-bold sm:inline-block">
+			<span class="inline-block font-bold">
 				whatvever the name of the site is
 			</span>
 		</a>
 		<DesktopNav {navItems} />
-		<div
-			class="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end"
-		>
+		<div class="flex flex-1 items-center justify-end">
 			<nav class="flex items-center">
-				<ThemeToggle />
-				<ModeWatcher />
 				<MobileNav {navItems} />
 			</nav>
 		</div>

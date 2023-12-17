@@ -1,12 +1,20 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { cn } from '$lib/utils';
+	import type { Snippet } from 'svelte';
 
-	export let href: string;
-	export let open: boolean;
-
-	let className: string | undefined | null = undefined;
-	export { className as class };
+	let {
+		href,
+		open,
+		class: className,
+		children,
+		...rest
+	} = $props<{
+		href: string;
+		open?: boolean;
+		class?: string;
+		children: Snippet;
+	}>();
 </script>
 
 <a
@@ -16,7 +24,7 @@
 		$page.url.pathname === href ? 'text-foreground' : 'text-foreground/60',
 		className,
 	)}
-	{...$$restProps}
+	{...rest}
 >
-	<slot />
+	{@render children()}
 </a>

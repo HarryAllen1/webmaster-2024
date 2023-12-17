@@ -2,7 +2,9 @@
 	import { page } from '$app/stores';
 	import { cn } from '$lib/utils';
 
-	export let navItems: { title: string; href: string }[];
+	const { navItems } = $props<{
+		navItems: { title: string; href: string }[];
+	}>();
 </script>
 
 <div class="mr-4 hidden lg:flex">

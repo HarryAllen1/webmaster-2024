@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	export let title: string;
-	export let description: string = '';
+	let { title, description = '' } = $props<{
+		title: string;
+		description?: string;
+	}>();
 </script>
 
 <svelte:head>
