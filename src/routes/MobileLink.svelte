@@ -5,6 +5,7 @@
 
 	let {
 		href,
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		open,
 		class: className,
 		children,
@@ -21,6 +22,7 @@
 	{href}
 	on:click={() => (open = false)}
 	class={cn(
+		// eslint-disable-next-line svelte/valid-compile
 		$page.url.pathname === href ? 'text-foreground' : 'text-foreground/60',
 		className,
 	)}

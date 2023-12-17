@@ -14,6 +14,7 @@
 				href={navItem.href}
 				class={cn(
 					'transition-colors hover:text-foreground/80',
+					// eslint-disable-next-line svelte/valid-compile
 					$page.url.pathname === navItem.href
 						? 'text-foreground'
 						: 'text-foreground/60',
