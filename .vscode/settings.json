@@ -1,4 +1,3 @@
 {
-	"prettier.prettierPath": "node_modules/prettier",
-	"typescript.preferences.importModuleSpecifier": "project-relative"
+	"prettier.prettierPath": "node_modules/prettier"
 }
