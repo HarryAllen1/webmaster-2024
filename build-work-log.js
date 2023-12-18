@@ -43,7 +43,7 @@ await convertPDF(
 	'portrait',
 );
 
-const allLicenses = await glob('node_modules/**/LICENSE*', {
+const allLicenses = await glob('./node_modules/**/LICENSE*', {
 	dot: true,
 	filesOnly: true,
 });
