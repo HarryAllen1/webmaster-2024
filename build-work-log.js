@@ -1,6 +1,7 @@
 import { createCanvas } from '@napi-rs/canvas';
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { getDocument } from 'pdfjs-dist';
+import glob from 'tiny-glob';
 
 /**
  * @param {string} file
@@ -41,3 +42,22 @@ await convertPDF(
 	'./src/routes/about/copyright-checklist.webp',
 	'portrait',
 );
+
+const allLicenses = await glob('node_modules/**/LICENSE*', {
+	dot: true,
+	filesOnly: true,
+});
+
+let allLicenseText = '';
+for (const license of allLicenses) {
+	const licenseText = await readFile(license, 'utf-8');
+	const [name] = license.split('/').slice(-2);
+	if (allLicenseText.includes(`${name}\n`)) continue;
+	allLicenseText += `
+${name}
+${'-'.repeat(name.length)}
+${licenseText}
+`;
+}
+
+await writeFile('./static/licenses.txt', allLicenseText);

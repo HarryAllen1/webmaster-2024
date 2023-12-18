@@ -82,6 +82,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.3.6
     version: 3.3.6
+  tiny-glob:
+    specifier: ^0.2.9
+    version: 0.2.9
   tslib:
     specifier: ^2.4.1
     version: 2.6.2
