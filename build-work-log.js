@@ -50,7 +50,7 @@ const allLicenses = await glob('./node_modules/**/LICENSE*', {
 
 let allLicenseText = '';
 for (const license of allLicenses) {
-	const licenseText = await readFile(license, 'utf-8');
+	const licenseText = await readFile(license);
 	const [name] = license.split('/').slice(-2);
 	if (allLicenseText.includes(`${name}\n`)) continue;
 	allLicenseText += `
