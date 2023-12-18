@@ -1,3 +1,4 @@
+// @ts-check
 import { createCanvas } from '@napi-rs/canvas';
 import { readFile, writeFile } from 'node:fs/promises';
 import { getDocument } from 'pdfjs-dist';
@@ -13,23 +14,31 @@ const convertPDF = async (file, out, orientation) => {
 		orientation === 'landscape'
 			? createCanvas(3300, 2550)
 			: createCanvas(2550, 3300);
+	console.log('created canvas');
 	/** @type {any} */
 	const ctx = canvas.getContext('2d');
+	console.log('got context');
 
 	const doc = await getDocument({
 		url: file,
 		standardFontDataUrl: './static/',
 	}).promise;
+	console.log('got document');
 
 	const page = await doc.getPage(1);
+	console.log('got page');
 	const viewport = page.getViewport({ scale: 4.1 });
+	console.log('got viewport');
 	await page.render({
 		canvasContext: ctx,
 		viewport,
 	}).promise;
+	console.log('rendered page');
 	const buffer = canvas.toBuffer('image/webp');
+	console.log('got buffer');
 
 	await writeFile(out, buffer);
+	console.log('wrote file');
 };
 
 await convertPDF(
