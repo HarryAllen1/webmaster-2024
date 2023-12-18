@@ -5,5 +5,7 @@
 	<a href="/licenses.txt" class="font-medium underline underline-offset-4">
 		Licenses of all dependencies
 	</a>
-	<enhanced:img src="./work-log.webp" alt="Work log" />
+	<a href="/work-log.pdf" class="font-medium underline underline-offset-4">
+		Work log
+	</a>
 </div>

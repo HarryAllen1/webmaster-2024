@@ -7,7 +7,7 @@ export default defineConfig({
 		{
 			name: 'build-work-log',
 			async buildStart() {
-				await import('./build-work-log.js');
+				await import('./build-license-file.js');
 			},
 		},
 		enhancedImages(),
