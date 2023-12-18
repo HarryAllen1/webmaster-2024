@@ -1,5 +1,5 @@
 // @ts-check
-import { createCanvas } from '@napi-rs/canvas';
+import { createCanvas } from 'canvas';
 import { readFile, writeFile } from 'node:fs/promises';
 import { getDocument } from 'pdfjs-dist';
 import glob from 'tiny-glob';
@@ -34,7 +34,7 @@ const convertPDF = async (file, out, orientation) => {
 		viewport,
 	}).promise;
 	console.log('rendered page');
-	const buffer = canvas.toBuffer('image/webp');
+	const buffer = canvas.toBuffer('image/png');
 	console.log('got buffer');
 
 	await writeFile(out, buffer);
