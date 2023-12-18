@@ -43,12 +43,12 @@ const convertPDF = async (file, out, orientation) => {
 
 await convertPDF(
 	'./static/work-log.pdf',
-	'./src/routes/about/work-log.webp',
+	'./src/routes/about/work-log.png',
 	'landscape',
 );
 await convertPDF(
 	'./static/student-copyright-checklist.pdf',
-	'./src/routes/about/copyright-checklist.webp',
+	'./src/routes/about/copyright-checklist.png',
 	'portrait',
 );
 
