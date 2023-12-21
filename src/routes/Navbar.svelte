@@ -1,6 +1,5 @@
 <script lang="ts">
-	import DesktopNav from './DesktopNav.svelte';
-	import MobileNav from './MobileNav.svelte';
+	import Nav from './Nav.svelte';
 
 	const navItems: { title: string; href: string }[] = [
 		{
@@ -19,10 +18,10 @@
 				whatvever the name of the site is
 			</span>
 		</a>
-		<DesktopNav {navItems} />
+
 		<div class="flex flex-1 items-center justify-end">
 			<nav class="flex items-center">
-				<MobileNav {navItems} />
+				<Nav {navItems} />
 			</nav>
 		</div>
 	</div>

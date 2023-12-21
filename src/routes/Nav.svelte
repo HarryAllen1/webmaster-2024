@@ -16,9 +16,9 @@
 		<Button
 			builders={[builder]}
 			variant="ghost"
-			class="ml-6 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
+			class="ml-6 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
 		>
-			<Menu class="h-5 w-5" />
+			<Menu class="size-5" />
 			<span class="sr-only">Toggle Menu</span>
 		</Button>
 	</Sheet.Trigger>

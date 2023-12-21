@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { cn } from '$lib/utils';
 	import type { Snippet } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	let {
 		href,
@@ -18,15 +19,20 @@
 	}>();
 </script>
 
-<a
-	{href}
-	on:click={() => (open = false)}
-	class={cn(
-		// eslint-disable-next-line svelte/valid-compile
-		$page.url.pathname === href ? 'text-foreground' : 'text-foreground/60',
-		className,
-	)}
-	{...rest}
->
-	{@render children()}
-</a>
+{#if open}
+	<a
+		{href}
+		transition:fly={{
+			delay: 1000,
+		}}
+		on:click={() => (open = false)}
+		class={cn(
+			// eslint-disable-next-line svelte/valid-compile
+			$page.url.pathname === href ? 'text-foreground' : 'text-foreground/60',
+			className,
+		)}
+		{...rest}
+	>
+		{@render children()}
+	</a>
+{/if}
