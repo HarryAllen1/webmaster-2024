@@ -22,7 +22,7 @@
 			<span class="sr-only">Toggle Menu</span>
 		</Button>
 	</Sheet.Trigger>
-	<Sheet.Content side="right" class="pl-0">
+	<Sheet.Content side="right" class="max-w-xs pl-0">
 		<div class="my-4 h-[calc(100vh-8rem)] overflow-auto pb-10 pl-6">
 			<div class="flex flex-col space-y-3">
 				{#each navItems as navItem}

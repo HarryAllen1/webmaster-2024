@@ -6,12 +6,40 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	gsap.registerPlugin(ScrollTrigger);
+
+	$effect(() => {
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#content',
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true,
+			},
+		});
+		gsap.utils.toArray('.parallax').forEach((l) => {
+			const layer = l as HTMLElement;
+			const depth = layer.dataset.depth;
+			if (!depth) return;
+			const movement = -(layer.offsetHeight * Number(depth));
+			tl.to(
+				layer,
+				{
+					y: movement,
+					ease: 'none',
+				},
+				0,
+			);
+		});
+	});
 </script>
 
 <Metadata title="GreenHaven" description="the best webmaster site" />
 
-<div class="mt-20 flex flex-col">
-	<div class="container flex w-full flex-col items-center">
+<div class="mt-20 flex flex-col" id="content">
+	<div
+		class="parallax container flex w-full flex-col items-center"
+		data-depth="0.2"
+	>
 		<h1
 			class="scroll-m-20 font-serif text-4xl font-extrabold tracking-tight lg:text-5xl"
 		>
@@ -22,7 +50,7 @@
 			<Search shouldFocus />
 		</div>
 	</div>
-	<div class="flex w-full flex-col">
+	<div class="parallax flex w-full flex-col" data-depth="0.4">
 		<div class="flex w-full flex-row justify-between">
 			<svg
 				viewBox="0 0 900 178"

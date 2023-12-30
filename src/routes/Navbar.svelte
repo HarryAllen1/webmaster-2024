@@ -3,6 +3,10 @@
 
 	const navItems: { title: string; href: string }[] = [
 		{
+			title: 'Programs',
+			href: '/programs',
+		},
+		{
 			title: 'About',
 			href: '/about',
 		},

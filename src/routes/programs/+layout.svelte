@@ -4,10 +4,14 @@
 	import { page } from '$app/stores';
 	import Metadata from '$lib/Metadata.svelte';
 	import { untrack } from 'svelte';
+	import { Button } from '$lib/components/ui/button';
+	import { Menu } from 'lucide-svelte';
+	import * as Sheet from '$lib/components/ui/sheet';
 
 	const { children } = $props();
 
 	let headings = $state<[string, string][]>([]);
+	let navSheetOpen = $state(false);
 
 	$effect(() => {
 		// eslint-disable-next-line svelte/valid-compile
@@ -29,14 +33,38 @@
 	});
 </script>
 
+<div class="flex flex-row justify-between border-b md:hidden">
+	<Sheet.Root bind:open={navSheetOpen}>
+		<Sheet.Trigger>
+			<Menu />
+			Menu
+		</Sheet.Trigger>
+		<Sheet.Content side="left">
+			<p>content</p>
+		</Sheet.Content>
+	</Sheet.Root>
+	<Button variant="ghost">Menu</Button>
+</div>
 <div
 	class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
 >
 	<aside
 		class="fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 overflow-y-auto md:sticky md:block"
 	>
-		<div class="h-full py-6 pl-8 pr-6 lg:py-8">
+		<div class="h-full py-6 pr-6 lg:py-8">
 			<div class="w-full">
+				<a
+					class={cn(
+						'group flex w-full items-center whitespace-nowrap rounded-md px-2 py-1 text-lg hover:underline',
+						// eslint-disable-next-line svelte/valid-compile
+						$page.url.pathname === `/programs`
+							? 'font-medium text-foreground'
+							: 'font-semibold text-muted-foreground',
+					)}
+					href="/programs"
+				>
+					Programs
+				</a>
 				{#each programs as program, index (index)}
 					<a
 						class={cn(
