@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import * as Sheet from '$lib/components/ui/sheet';
-	import { Menu } from 'lucide-svelte';
+	import { Menu, X } from 'lucide-svelte';
 	import MobileLink from './MobileLink.svelte';
 
 	let { navItems } = $props<{
@@ -22,7 +22,7 @@
 			<span class="sr-only">Toggle Menu</span>
 		</Button>
 	</Sheet.Trigger>
-	<Sheet.Content side="left" class="pr-0">
+	<Sheet.Content side="right" class="pl-0">
 		<div class="my-4 h-[calc(100vh-8rem)] overflow-auto pb-10 pl-6">
 			<div class="flex flex-col space-y-3">
 				{#each navItems as navItem}

@@ -14,8 +14,8 @@
 >
 	<div class="container flex h-14 items-center">
 		<a href="/" class="mr-6 flex items-center space-x-2">
-			<span class="inline-block font-bold">
-				whatvever the name of the site is
+			<span class="inline-block font-serif">
+				Place<span class="font-bold">Holder</span>
 			</span>
 		</a>
 

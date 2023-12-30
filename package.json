@@ -15,6 +15,7 @@
 	"dependencies": {
 		"bits-ui": "^0.12.0",
 		"clsx": "^2.1.0",
+		"gsap": "^3.12.4",
 		"lucide-svelte": "^0.303.0",
 		"tailwind-merge": "^2.2.0",
 		"tailwind-variants": "^0.1.19"
@@ -50,6 +51,9 @@
 			"allowedVersions": {
 				"svelte": "^5.0.0"
 			}
+		},
+		"patchedDependencies": {
+			"gsap@3.12.4": "patches/gsap@3.12.4.patch"
 		}
 	}
 }
