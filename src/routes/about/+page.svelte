@@ -2,15 +2,17 @@
 	import Metadata from '$lib/Metadata.svelte';
 </script>
 
-<Metadata title="About" />
+<Metadata title="About - GreenHaven" />
 
 <div class="container mt-4 space-y-2">
-	<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+	<h1
+		class="scroll-m-20 font-serif text-4xl font-extrabold tracking-tight lg:text-5xl"
+	>
 		About Site
 	</h1>
 
 	<h2
-		class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+		class="scroll-m-20 border-b pb-2 font-serif text-3xl font-semibold tracking-tight transition-colors first:mt-0"
 	>
 		Technologies Used and Statement of Originality
 	</h2>
@@ -42,7 +44,7 @@
 	</p>
 
 	<h2
-		class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+		class="scroll-m-20 border-b pb-2 font-serif text-3xl font-semibold tracking-tight transition-colors first:mt-0"
 	>
 		Documentation
 	</h2>
@@ -62,7 +64,7 @@
 	</div>
 
 	<h2
-		class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
+		class="scroll-m-20 border-b pb-2 font-serif text-3xl font-semibold tracking-tight transition-colors first:mt-0"
 	>
 		Sources
 	</h2>

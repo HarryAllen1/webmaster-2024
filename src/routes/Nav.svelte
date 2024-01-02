@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import * as Sheet from '$lib/components/ui/sheet';
-	import { Menu, X } from 'lucide-svelte';
+	import { Menu } from 'lucide-svelte';
 	import MobileLink from './MobileLink.svelte';
 
 	let { navItems } = $props<{

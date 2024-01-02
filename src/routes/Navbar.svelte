@@ -13,9 +13,9 @@
 	class="sticky top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
 	<div class="container flex h-14 items-center">
-		<a href="/" class="mr-6 flex items-center space-x-2">
+		<a href="/" class="mr-6 flex items-center space-x-2 text-xl">
 			<span class="inline-block font-serif">
-				Place<span class="font-bold">Holder</span>
+				<span class="font-bold text-green-900">Green</span>Haven
 			</span>
 		</a>
 
