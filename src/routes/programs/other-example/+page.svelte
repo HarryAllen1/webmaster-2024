@@ -11,8 +11,12 @@
 
 <p>
 	For images, make sure you save the image in the same folder as the page and
-	use the &lt;enhanced:img&gt; component (this converts the image into faster
-	formats and optimizes the size of the image).
+	use the <code>{'<enhanced:img>'}</code> component (this converts the image into
+	faster formats and optimizes the size of the image).
 </p>
+
+<h2>Example</h2>
+
+<pre><code>{`<enhanced:img src="./tree.jpeg" alt="A tree" />`}</code></pre>
 
 <enhanced:img src="./tree.jpeg" alt="A tree" />
