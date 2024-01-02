@@ -18,7 +18,7 @@
 			Search for <span class="text-green-900">green</span> home improvements...
 		</h1>
 		<div class="mt-4 flex flex-row gap-4">
-			<Button size="lg" class="px-4">Explore Options</Button>
+			<Button href="/programs" size="lg" class="px-4">Explore Options</Button>
 			<Search />
 		</div>
 	</div>
