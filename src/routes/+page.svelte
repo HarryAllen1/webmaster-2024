@@ -8,38 +8,20 @@
 	gsap.registerPlugin(ScrollTrigger);
 
 	$effect(() => {
-		const tl = gsap.timeline({
+		gsap.to('.parallax', {
 			scrollTrigger: {
-				trigger: '#content',
-				start: 'top top',
-				end: 'bottom top',
 				scrub: true,
 			},
-		});
-		gsap.utils.toArray('.parallax').forEach((l) => {
-			const layer = l as HTMLElement;
-			const depth = layer.dataset.depth;
-			if (!depth) return;
-			const movement = -(layer.offsetHeight * Number(depth));
-			tl.to(
-				layer,
-				{
-					y: movement,
-					ease: 'none',
-				},
-				0,
-			);
+			y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+			ease: 'none',
 		});
 	});
 </script>
 
 <Metadata title="GreenHaven" description="the best webmaster site" />
 
-<div class="mt-20 flex flex-col" id="content">
-	<div
-		class="parallax container flex w-full flex-col items-center"
-		data-depth="0.2"
-	>
+<div class="mt-20 flex flex-col">
+	<div class=" container flex w-full flex-col items-center">
 		<h1
 			class="scroll-m-20 font-serif text-4xl font-extrabold tracking-tight lg:text-5xl"
 		>
@@ -50,7 +32,7 @@
 			<Search shouldFocus />
 		</div>
 	</div>
-	<div class="parallax flex w-full flex-col" data-depth="0.4">
+	<div class="parallax flex w-full flex-col" data-speed="0.4">
 		<div class="flex w-full flex-row justify-between">
 			<svg
 				viewBox="0 0 900 178"
@@ -76,10 +58,30 @@
 				>
 					Programs
 				</h2>
-				<p class="text-lg text-white">
-					We have a lot of programs blah blah blah
-				</p>
-				<Button variant="secondary" class="mt-4" href="/programs">
+				<div class="prose text-lg text-primary-foreground">
+					<p>We have a lot of programs blah blah blah</p>
+					<p>this text is just to make the page scroll</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quam
+						esse perferendis illo provident est amet cum qui, incidunt molestiae
+						soluta pariatur nisi ipsa, nemo hic suscipit voluptates placeat
+						minus.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+						laudantium nihil dolorum dolore dignissimos tenetur voluptatum.
+						Ipsum adipisci aliquam minima illum quaerat voluptate ducimus ea
+						voluptatem id mollitia, esse molestiae.
+					</p>
+					<p>
+						Est tenetur porro fugiat consectetur assumenda vitae corporis cum
+						reiciendis odit debitis at rerum dolore, tempora deleniti dolores
+						praesentium asperiores hic totam sapiente ut saepe commodi adipisci!
+						Ducimus, illo reiciendis!
+					</p>
+				</div>
+
+				<Button variant="secondary" class="mt-6" href="/programs">
 					Explore programs
 				</Button>
 			</div>
