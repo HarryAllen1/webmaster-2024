@@ -10,6 +10,10 @@
 			title: 'About',
 			href: '/about',
 		},
+		{
+			title: 'Playground',
+			href: '/playground',
+		},
 	];
 </script>
 
