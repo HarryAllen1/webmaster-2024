@@ -21,7 +21,7 @@
 
 <Metadata title="GreenHaven" description="the best webmaster site" />
 
-<div class="mt-20 flex flex-col">
+<div class="mt-24 flex flex-col">
 	<div class=" container flex w-full flex-col items-center">
 		<h1
 			class="scroll-m-20 font-serif text-4xl font-extrabold tracking-tight lg:text-5xl"
