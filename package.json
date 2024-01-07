@@ -17,7 +17,7 @@
 		"clsx": "^2.1.0",
 		"cmdk-sv": "^0.0.12",
 		"gsap": "^3.12.4",
-		"lucide-svelte": "^0.303.0",
+		"lucide-svelte": "^0.304.0",
 		"tailwind-merge": "^2.2.0",
 		"tailwind-variants": "^0.1.20"
 	},
