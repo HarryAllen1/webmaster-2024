@@ -3,16 +3,16 @@
 
 	const navItems: { title: string; href: string }[] = [
 		{
+			title: 'Playground',
+			href: '/playground',
+		},
+		{
 			title: 'Programs',
 			href: '/programs',
 		},
 		{
 			title: 'About',
 			href: '/about',
-		},
-		{
-			title: 'Playground',
-			href: '/playground',
 		},
 	];
 </script>
