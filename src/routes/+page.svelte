@@ -13,7 +13,8 @@
 				scrub: true,
 				invalidateOnRefresh: true,
 			},
-			y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+			y: (i, target: HTMLElement) =>
+				-ScrollTrigger.maxScroll(window) * Number(target.dataset.speed ?? '1'),
 			ease: 'none',
 		});
 	});
