@@ -4,7 +4,10 @@
 	import { programs } from '../routes/programs/data';
 	import { goto } from '$app/navigation';
 
-	const { shouldFocus = false } = $props();
+	const { shouldFocus = false, class: className } = $props<{
+		shouldFocus?: boolean;
+		class?: string;
+	}>();
 
 	$effect(() => {
 		if (shouldFocus) {
@@ -15,7 +18,7 @@
 	});
 </script>
 
-<Command.Root class="max-w-[450px] rounded-lg border">
+<Command.Root class="max-w-[450px] rounded-lg border {className}">
 	<Command.Input id="search" placeholder="solar panels" />
 	<Command.List>
 		<Command.Empty>No results found.</Command.Empty>

@@ -30,7 +30,7 @@
 		</h1>
 		<div class="my-32 flex flex-row gap-4">
 			<Button href="/programs" size="lg" class="px-4">Explore Options</Button>
-			<Search shouldFocus />
+			<Search shouldFocus class="shadow-md" />
 		</div>
 	</div>
 	<div class="parallax flex w-full flex-col" data-speed="0.4">
