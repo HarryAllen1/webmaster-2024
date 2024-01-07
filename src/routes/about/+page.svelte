@@ -33,8 +33,9 @@
 		>
 			v5
 		</a>. For the styling, it uses
-		<a href="https://tailwindcss.com/"> TailwindCSS </a>, and the components are
-		from a heavily modified version of
+		<a class="underline underline-offset-4" href="https://tailwindcss.com/">
+			TailwindCSS
+		</a>, and the components are from a heavily modified version of
 		<a
 			class="underline underline-offset-4"
 			href="https://www.shadcn-svelte.com/"
