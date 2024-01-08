@@ -9,7 +9,7 @@ index c4a8939655f0e7dd4481c5ec3734258be095f31a..4987a86ddf8188fab9da8ec2896ec8bd
 +		"type": "module",
  	"module": "index.js",
 -	"main": "dist/gsap.js",
-+	"main": "src/gsap.js",
++	"main": "./src/gsap.js",
      "types": "types/index.d.ts",
  	"sideEffects": false,
      "keywords": [
