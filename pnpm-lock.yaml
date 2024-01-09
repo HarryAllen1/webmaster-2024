@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   gsap@3.12.4:
-    hash: bfvlpdhjfmqvtdbaqxabbsq3oq
+    hash: lqufqrsts4wu4dmp435zgprkcu
     path: patches/gsap@3.12.4.patch
 
 dependencies:
@@ -21,7 +21,7 @@ dependencies:
     version: 0.0.12(svelte@5.0.0-next.25)
   gsap:
     specifier: ^3.12.4
-    version: 3.12.4(patch_hash=bfvlpdhjfmqvtdbaqxabbsq3oq)
+    version: 3.12.4(patch_hash=lqufqrsts4wu4dmp435zgprkcu)
   lucide-svelte:
     specifier: ^0.307.0
     version: 0.307.0(svelte@5.0.0-next.25)
@@ -1967,7 +1967,7 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
 
-  /gsap@3.12.4(patch_hash=bfvlpdhjfmqvtdbaqxabbsq3oq):
+  /gsap@3.12.4(patch_hash=lqufqrsts4wu4dmp435zgprkcu):
     resolution: {integrity: sha512-1ByAq8dD0W4aBZ/JArgaQvc0gyUfkGkP8mgAQa0qZGdpOKlSOhOf+WNXjoLimKaKG3Z4Iu6DKZtnyszqQeyqWQ==}
     dev: false
     patched: true
